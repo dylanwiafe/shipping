@@ -1,0 +1,43 @@
+[
+  {
+    "customer_id": "03c03fdc-e6f1-4b04-919e-df06ba7722e2",
+    "first_name": "Alexine",
+    "last_name": "Corbin",
+    "password": "$2b$10$OeNOtNo/vzqiDvxne6rjbO1w2.vM/9Py22AC3Q28vPzEtTwYU1BDq",
+    "address": "",
+    "city": "",
+    "state": "",
+    "email": "",
+    "consignee": {
+      "first_name": "Alexine",
+      "last_name": "Corbin",
+      "address": "",
+      "city": "",
+      "state": "",
+      "email": "",
+      "phone_number": ""
+    },
+    "shipments": {
+      "shipment_id": {
+        "Vin Number": "",
+        "Booking Number": "",
+        "Container Number": "",
+        "Seal Number": "",
+        "Freight Price": "",
+        "ShipmentID": "",
+        "CustomerID": "",
+        "Created By": ""
+      },
+      "shipment_id": {
+        "Vin Number": "",
+        "Booking Number": "",
+        "Container Number": "",
+        "Seal Number": "",
+        "Freight Price": "",
+        "ShipmentID": "",
+        "CustomerID": "",
+        "Created By": ""
+      }
+    }
+  }
+]
