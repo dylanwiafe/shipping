@@ -1,0 +1,31 @@
+{
+  "name": "shipping",
+  "version": "1.0.0",
+  "description": "POST: New Order\r GET: One Order\r GET: All Orders\r PUT: Edit Order\r DEL: All orders\r DEL: One Order",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanwiafe/shipping.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanwiafe/shipping/issues"
+  },
+  "homepage": "https://github.com/dylanwiafe/shipping#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/preset-env": "^7.15.0",
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.2"
+  }
+}
