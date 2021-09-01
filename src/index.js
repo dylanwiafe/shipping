@@ -3,7 +3,7 @@ const app = express();
 import mongoose from "mongoose";
 //bookings routers
 import "dotenv/config";
-
+import bookingRouter from "./routes/bookings";
 app.listen(8081, () => {
   console.log("the app is listening");
 });
@@ -12,7 +12,7 @@ const uri = process.env.ATLAS_URI;
 mongoose
   .connect(uri, {
     useNewUrlParser: true,
-    useCreateIndex: true,
+    // useCreateIndex: true,
     useUnifiedTopology: true,
   })
   .then((res) => {
@@ -31,3 +31,4 @@ connection.once("open", () => {
 });
 
 app.use(express.json());
+app.use(bookingRouter);
