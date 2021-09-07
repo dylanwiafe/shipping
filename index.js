@@ -1,20 +1,18 @@
 import express from "express";
-const app = express();
 import mongoose from "mongoose";
 //bookings routers
 import "dotenv/config";
-import bookingRouter from "./routes/bookings";
+import bookingRouter from "./src/routes/bookings";
+const app = express();
+
 app.listen(8081, () => {
   console.log("the app is listening");
 });
+
 const uri = process.env.ATLAS_URI;
 
 mongoose
-  .connect(uri, {
-    useNewUrlParser: true,
-    // useCreateIndex: true,
-    useUnifiedTopology: true,
-  })
+  .connect(uri)
   .then((res) => {
     console.log("you have connected to the database");
   })
@@ -31,4 +29,6 @@ connection.once("open", () => {
 });
 
 app.use(express.json());
-app.use(bookingRouter);
+app.use("/bookings/", bookingRouter);
+
+export default app;
