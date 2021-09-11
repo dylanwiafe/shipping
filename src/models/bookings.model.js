@@ -11,11 +11,11 @@ const bookingSchema = new Schema(
     customer_id: { type: String, required: true },
     in_gate: { type: Boolean, required: true },
     port_of_origin: { type: String, required: true },
-    port_of_destination: { type: String, required: true },
+    port_of_destination: { type: String, required: false },
     author: { type: String, required: true },
     cars: [
       {
-        id: objectID,
+        id: { type: mongoose.ObjectId },
         make: String,
         year: Number,
         color: String,
@@ -25,11 +25,13 @@ const bookingSchema = new Schema(
     ],
     items: [
       {
-        type: String,
+        type: { type: String },
+        id: { type: mongoose.ObjectId },
       },
     ],
     documents: [
       {
+        id: { type: mongoose.ObjectId },
         doc_type: String,
         status: Boolean,
       },

@@ -49,6 +49,41 @@ const getAllBookings = (req, res) => {
     });
 };
 
+const updateInGate = (req, res) => {
+  let id = req.params.id;
+  // console.log(req.params);
+  try {
+    Booking.findByIdAndUpdate(
+      id,
+      { in_gate: req.body.in_gate },
+      { new: true },
+      () => {
+        return res.json({ message: "your in gate status has been updated" });
+      }
+    );
+  } catch (error) {
+    return res
+      .status(400)
+      .json({ message: "the attempt to update the status has failed" + err });
+  }
+};
+
+const deleteBooking = (req, res) => {
+  let id = req.params.id;
+
+  try {
+    Booking.findByIdAndDelete(id, () => {
+      return res.status(200).json({ message: "efnwbnfjebj" });
+    });
+  } catch (error) {
+    return res
+      .status(404)
+      .json({ message: "cannot find an object with the id" + error });
+  }
+};
 bookingRouter.route("/").get(getAllBookings);
 bookingRouter.route("/").post(addBooking);
+bookingRouter.route("/:id").patch(updateInGate);
+bookingRouter.route("/:id").delete(deleteBooking);
+
 module.exports = bookingRouter;
