@@ -3,6 +3,7 @@ import mongoose from "mongoose";
 //bookings routers
 import "dotenv/config";
 import bookingRouter from "./src/routes/bookings";
+
 const app = express();
 
 app.listen(8081, () => {
